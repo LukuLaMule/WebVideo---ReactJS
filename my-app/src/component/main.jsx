@@ -1,15 +1,25 @@
-import react from 'react'; // Importing React for using React library 
-import video from '../assets/video.mp4'; // Importing video from assets folder
+import React from "react";
+import video from '../assets/video.MP4';
+import { Helmet } from 'react-helmet'; // Importing Helmet for changing the title of the page
 
-const Main = () => { // Main component function 
+
+const Main = () => {
     return (
-            <div classname = 'main'>
-                <video src = {video} autoPlay loop muted /> // Video tag with video source, controls, autoPlay and loop attributes
-                <div classname = 'content'>
-                    <h1>Les aventures de Luku</h1>
+        <div>
+        <Helmet>
+        <title>Rando</title>
+        </Helmet>
+
+        
+
+            <div className = 'main'>
+                <video src = {video} autoPlay loop muted /> 
+                <div className = 'content'>
+                    <h1>Randonnée Pic Pétragème - 20 Août 2023</h1>
+            </div>
             </div>
         </div>
     );
 }
 
-export default Main; // Exporting Main component
+export default Main; 
